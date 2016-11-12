@@ -1,8 +1,10 @@
 from distutils.core import setup
+import languages as app
+
 setup(
   name = 'django-language-field',
   packages = ['django-language-field'], # this must be the same as the name above
-  version = __version__,
+  version = app.__version__,
   description = 'A pluggable django app that provides a comprehensive language choices field',
   author = 'Ryan Castner',
   author_email = 'ryancastner@gmail.com',

@@ -12,9 +12,9 @@ setup(
   keywords = ['django','language','languages','field'], # arbitrary keywords
   classifiers=[
         'Development Status :: 3 - Alpha',
+        'Framework :: Django :: 1.10',
         'Framework :: Django :: 1.8',
         'Framework :: Django :: 1.9',
-        'Framework :: Django :: 1.10',
         'Environment :: Web Environment',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 2.7',

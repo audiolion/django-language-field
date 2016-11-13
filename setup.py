@@ -19,9 +19,7 @@ setup(
   url = 'https://github.com/audiolion/django-language-field', # use the URL to the github repo
   license='MIT',
   platforms=['OS Independent'],
-  packages = find_packages(), # this must be the same as the name above
-  package_data = {'languages': ''},
-  include_package_data=True,
+  packages = ['languages'], # this must be the same as the name above
   zip_safe=False,
   keywords = ['django','language','languages','field'], # arbitrary keywords
   classifiers=[

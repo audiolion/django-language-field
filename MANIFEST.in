@@ -1,4 +1,3 @@
 include LICENSE
 include README
 recursive-include languages *.py
-global-exclude *.pyc *.swp *.python-version

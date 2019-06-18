@@ -6,6 +6,6 @@ class LanguageField(forms.ChoiceField):
     """
     def __init__(self, *args, **kwargs):
         from .languages import LANGUAGES
-        defaults = {'choices': LANGUAGES}
+        defaults = {'choices': sorted(LANGUAGES, key=lambda p: p[1])}
         defaults.update(kwargs)
         super().__init__(*args, **defaults)

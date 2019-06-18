@@ -5,6 +5,7 @@ class LanguageField(forms.ChoiceField):
     A language field for Django forms.
     """
     def __init__(self, *args, **kwargs):
-        defaults = {} # {'choices': }
+        from .languages import LANGUAGES
+        defaults = {'choices': LANGUAGES}
         defaults.update(kwargs)
-        super().__init__(*args, *args, **defaults)
+        super().__init__(*args, **defaults)

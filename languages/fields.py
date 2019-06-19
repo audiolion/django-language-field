@@ -11,3 +11,9 @@ class LanguageField(CharField):
         kwargs.setdefault('max_length', 3)
         kwargs.setdefault('choices', LANGUAGES)
         super(CharField, self).__init__(*args, **kwargs)
+
+    def formfield(self, **kwargs):
+        from languages import forms
+        defaults = {'form_class': forms.LanguageField}
+        defaults.update(kwargs)
+        return super().formfield(**defaults)

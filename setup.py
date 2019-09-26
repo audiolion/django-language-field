@@ -10,13 +10,13 @@ def read(fname):
         return ''
 
 setup(
-  name = 'django-language-field',
+  name = 'django-language-code-fields',
   version = app.__version__,
-  description = 'A pluggable django app that provides a comprehensive language choices field',
+  description = 'A pluggable django app that provides a comprehensive language and region choices field',
   long_description=read('README.rst'),
-  author = 'Ryan Castner',
-  author_email = 'ryancastner@gmail.com',
-  url = 'https://github.com/audiolion/django-language-field', # use the URL to the github repo
+  author='Ryan Castner',
+  author_email='ryancastner@gmail.com',
+  url = 'https://github.com/Coykto/django-language-field', # use the URL to the github repo
   license='MIT',
   platforms=['OS Independent'],
   packages = ['languages'], # this must be the same as the name above

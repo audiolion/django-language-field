@@ -8,7 +8,7 @@ Subtag Registry, either call this module directly from the command line
 import os
 import re
 import codecs
-import urllib2
+from urllib.request import urlopen
 
 TEMPLATE = u'''# -*- coding: utf-8 -*-
 from django.utils.translation import ugettext_lazy as _
@@ -27,7 +27,7 @@ def regenerate(location='http://www.iana.org/assignments/language-subtag-registr
     paren = re.compile('\([^)]*\)')
 
     # Get the language list.
-    data = urllib2.urlopen(location)
+    data = urlopen(location)
     if ('content-type' in data.headers and
                 'charset=' in data.headers['content-type']):
         encoding = data.headers['content-type'].split('charset=')[-1]

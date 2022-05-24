@@ -10,4 +10,4 @@ class LanguageField(CharField):
 
         kwargs.setdefault('max_length', 3)
         kwargs.setdefault('choices', LANGUAGES)
-        super(CharField, self).__init__(*args, db_collation, **kwargs)
+        super().__init__(*args, db_collation, **kwargs)

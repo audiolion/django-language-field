@@ -39,7 +39,7 @@ def regenerate(location='http://www.iana.org/assignments/language-subtag-registr
     p = None
     for line in content.splitlines():
         if line == '%%':
-            if 'Type' in info and info['Type'] == 'language':
+            if 'Type' in info and info['Type'] == 'language' and 'Subtag' in info and len(info['Subtag']) <= 3:
                 languages.append(info)
             info = {}
         elif ':' not in line and p:

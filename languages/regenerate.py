@@ -11,7 +11,7 @@ import codecs
 from urllib.request import urlopen
 
 TEMPLATE = u'''# -*- coding: utf-8 -*-
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = (
     %(languages)s

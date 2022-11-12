@@ -9,6 +9,7 @@ class LanguageField(CharField):
         from .languages import LANGUAGES
 
         # kwargs.setdefault('max_length', 3)
+        kwargs.setdefault('max_length', 255)
         kwargs.setdefault('choices', LANGUAGES)
         super(CharField, self).__init__(*args, **kwargs)
 
